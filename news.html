@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News | Spring Hills PD</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #d3d3d3;
+        }
+        header {
+            text-align: center;
+            padding-top: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+        h1 {
+            font-family: 'Courier New', monospace;
+            font-size: 2.5rem;
+            color: #1a3e72;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .blue-stripe {
+            height: 10px;
+            background: #1a3e72;
+            width: 100%;
+            animation: expandWidth 1s ease-out;
+        }
+        nav {
+            text-align: center;
+            padding: 5px 0;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        nav a {
+            color: #1a3e72;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            color: #0d2b5b;
+        }
+        nav a:hover:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background: #1a3e72;
+        }
+        .news-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .news-card {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        .news-card:nth-child(1) { animation-delay: 0.2s; }
+        .news-card:nth-child(2) { animation-delay: 0.4s; }
+        .news-card:nth-child(3) { animation-delay: 0.6s; }
+        .news-header {
+            background: #1a3e72;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .news-date {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .news-content {
+            padding: 20px;
+        }
+        .news-content h3 {
+            color: #1a3e72;
+            margin-top: 0;
+            border-bottom: 2px solid #1a3e72;
+            padding-bottom: 10px;
+        }
+        footer {
+            background: #1a3e72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes expandWidth {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SPRING HILLS POLICE DEPARTMENT</h1>
+        <div class="blue-stripe"></div>
+    </header>
+    
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="departments.html">DEPARTMENTS</a>
+        <a href="news.html">NEWS</a>
+        <a href="events.html">EVENTS</a>
+        <a href="https://www.roblox.com/games/6622795055/Berkeley-County#!/store" target="_blank">STORE</a>
+    </nav>
+
+    <div class="news-container">
+        <div class="news-card">
+            <div class="news-header">
+                <h2>MAJOR DRUG BUST</h2>
+                <span class="news-date">June 15, 2023</span>
+            </div>
+            <div class="news-content">
+                <h3>SHPD Dismantles Local Drug Ring</h3>
+                <p>Spring Hills Police Department's Organized Crime Unit has successfully arrested 12 individuals involved in a major drug trafficking operation. Over 5kg of illegal substances were confiscated in a dawn raid at multiple locations across the city.</p>
+                <p>"This operation took months of undercover work," said Captain Maria Rodriguez. "We've cut off a significant supply line of dangerous drugs in our community."</p>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="news-header">
+                <h2>COMMUNITY PROGRAM</h2>
+                <span class="news-date">May 28, 2023</span>
+            </div>
+            <div class="news-content">
+                <h3>Neighborhood Watch Initiative Launched</h3>
+                <p>The SHPD has partnered with local residents to launch "Eyes on Spring Hills", a new neighborhood watch program. Over 200 citizens attended the inaugural training session at the Police Community Center.</p>
+                <p>"When police and community work together, we create real change," said Chief Daniel Brooks during the opening ceremony. The program includes safety workshops and emergency response training.</p>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="news-header">
+                <h2>NEW TECHNOLOGY</h2>
+                <span class="news-date">April 10, 2023</span>
+            </div>
+            <div class="news-content">
+                <h3>SHPD Deployes Search & Rescue Drones</h3>
+                <p>The department has acquired 4 advanced drones equipped with thermal imaging to assist in search operations. In their first month of use, the drones helped locate 3 missing persons in record time.</p>
+                <p>"This technology allows us to cover difficult terrain quickly," explained Sgt. James Wilson, head of the ERT. "We can now search areas that were previously inaccessible."</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 Spring Hills Police Department | 1450 South Main St.</p>
+        <p>Emergency: 911 | Non-Emergency: (555) 123-4567</p>
+    </footer>
+</body>
+</html>

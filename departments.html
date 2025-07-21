@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Departments | Spring Hills PD</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #d3d3d3;
+        }
+        header {
+            text-align: center;
+            padding-top: 30px;
+        }
+        h1 {
+            font-family: 'Courier New', monospace;
+            font-size: 2.5rem;
+            color: #1a3e72;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .blue-stripe {
+            height: 10px;
+            background: #1a3e72;
+            width: 100%;
+        }
+        nav {
+            text-align: center;
+            padding: 5px 0;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: #1a3e72;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        nav a:hover:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background: #1a3e72;
+        }
+        .department {
+            background: white;
+            margin: 20px auto;
+            padding: 25px;
+            width: 80%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: departmentEntry 0.8s ease-out forwards;
+        }
+        .department:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: #1a3e72;
+        }
+        .department h2 {
+            color: #1a3e72;
+            margin-top: 0;
+        }
+        .department p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .department:nth-child(1) { animation-delay: 0.2s; }
+        .department:nth-child(2) { animation-delay: 0.4s; }
+        .department:nth-child(3) { animation-delay: 0.6s; }
+        .department:nth-child(4) { animation-delay: 0.8s; }
+        .department:nth-child(5) { animation-delay: 1.0s; }
+
+        /* Анимация только для отделов */
+        @keyframes departmentEntry {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SPRING HILLS POLICE DEPARTMENT</h1>
+        <div class="blue-stripe"></div>
+    </header>
+    
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="departments.html">DEPARTMENTS</a>
+        <a href="news.html">NEWS</a>
+        <a href="events.html">EVENTS</a>
+        <a href="https://www.roblox.com/games/6622795055/Berkeley-County#!/store" target="_blank">STORE</a>
+    </nav>
+
+    <main>
+        <div class="department">
+            <h2>ERT (Emergency Response Team)</h2>
+            <p>Our tactical unit handling high-risk operations including hostage situations, armed confrontations, and counter-terrorism missions. Team members undergo rigorous SWAT training.</p>
+        </div>
+
+        <div class="department">
+            <h2>Detective Division</h2>
+            <p>Investigates major crimes including homicides, sexual assaults, and complex fraud cases. Works closely with forensic specialists and prosecutors.</p>
+        </div>
+
+        <div class="department">
+            <h2>Patrol Unit</h2>
+            <p>24/7 frontline officers maintaining public safety through rapid response, traffic enforcement, and community policing initiatives.</p>
+        </div>
+
+        <div class="department">
+            <h2>Organized Crime Unit</h2>
+            <p>Specializes in dismantling criminal networks involved in drug trafficking, money laundering, and racketeering using undercover operations and intelligence gathering.</p>
+        </div>
+
+        <div class="department">
+            <h2>Airstrip Police</h2>
+            <p>Specialized unit responsible for airport and airstrip security, ensuring safe operations of all air traffic in Spring Hills jurisdiction. Handles aircraft-related incidents, runway security, and coordinates with federal aviation authorities.</p>
+        </div>
+    </main>
+</body>
+</html>

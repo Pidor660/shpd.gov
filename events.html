@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events | Spring Hills PD</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #d3d3d3;
+        }
+        header {
+            text-align: center;
+            padding-top: 30px;
+        }
+        h1 {
+            font-family: 'Courier New', monospace;
+            font-size: 2.5rem;
+            color: #1a3e72;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .blue-stripe {
+            height: 10px;
+            background: #1a3e72;
+            width: 100%;
+        }
+        nav {
+            text-align: center;
+            padding: 5px 0;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: #1a3e72;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            color: #0d2b5b;
+        }
+        nav a:hover:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background: #1a3e72;
+        }
+        .coming-soon {
+            text-align: center;
+            margin: 100px auto;
+            perspective: 1000px;
+        }
+        .to-be-continued {
+            font-size: 5rem;
+            color: #1a3e72;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite alternate, rotate 15s infinite linear;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        .to-be-continued:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background: #1a3e72;
+            bottom: -20px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: underlinePulse 3s infinite;
+        }
+        .subtext {
+            margin-top: 50px;
+            font-size: 1.5rem;
+            color: #1a3e72;
+        }
+        footer {
+            background: #1a3e72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 100px;
+        }
+
+        /* Анимации только для "To Be Continued" */
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        @keyframes rotate {
+            from { transform: rotateY(0); }
+            to { transform: rotateY(360deg); }
+        }
+        @keyframes underlinePulse {
+            0% { transform: scaleX(0); }
+            50% { transform: scaleX(1); }
+            100% { transform: scaleX(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SPRING HILLS POLICE DEPARTMENT</h1>
+        <div class="blue-stripe"></div>
+    </header>
+    
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="departments.html">DEPARTMENTS</a>
+        <a href="news.html">NEWS</a>
+        <a href="events.html">EVENTS</a>
+        <a href="https://www.roblox.com/games/6622795055/Berkeley-County#!/store" target="_blank">STORE</a>
+    </nav>
+
+    <div class="coming-soon">
+        <div class="to-be-continued">To Be Continued</div>
+        <div class="subtext">Exciting community events coming soon<br>Stay tuned for updates!</div>
+    </div>
+
+    <footer>
+        <p>© 2023 Spring Hills Police Department | 1450 South Main St.</p>
+        <p>Emergency: 911 | Non-Emergency: (555) 123-4567</p>
+    </footer>
+</body>
+</html>

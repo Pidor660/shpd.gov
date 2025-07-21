@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring Hills Police Department</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #d3d3d3;
+        }
+        header {
+            text-align: center;
+            padding-top: 30px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        h1 {
+            font-family: 'Courier New', monospace;
+            font-size: 2.5rem;
+            color: #1a3e72;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .blue-stripe {
+            height: 10px;
+            background: #1a3e72;
+            width: 100%;
+            animation: expandWidth 1s ease-out;
+        }
+        nav {
+            text-align: center;
+            padding: 5px 0;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: #1a3e72;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        nav a:hover {
+            color: #0d2b5b;
+            transform: translateY(-3px);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a:hover:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background: #1a3e72;
+            animation: underlineGrow 0.3s ease-out;
+        }
+        .content-block {
+            background: white;
+            margin: 20px auto;
+            padding: 25px;
+            width: 80%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 1s ease-out;
+        }
+        .content-block:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: #1a3e72;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .stat-item {
+            padding: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            cursor: default;
+            flex: 1;
+            margin: 0 10px;
+        }
+        .stat-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #1a3e72;
+            z-index: -1;
+            border-radius: 10px;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+        .stat-item:hover:before {
+            transform: scale(1);
+        }
+        .stat-item:hover {
+            color: white;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            color: #1a3e72;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .stat-item:hover .stat-number {
+            color: white;
+        }
+        .address {
+            text-align: center;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #1a3e72;
+            font-size: 1.2rem;
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes expandWidth {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes underlineGrow {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SPRING HILLS POLICE DEPARTMENT</h1>
+        <div class="blue-stripe"></div>
+    </header>
+    
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="departments.html">DEPARTMENTS</a>
+        <a href="news.html">NEWS</a>
+        <a href="events.html">EVENTS</a>
+        <a href="https://www.roblox.com/games/6622795055/Berkeley-County#!/store" target="_blank">STORE</a>
+    </nav>
+
+    <main>
+        <div class="content-block">
+            <h2 style="text-align: center; color: #1a3e72;">ABOUT US</h2>
+            <p style="text-align: center; font-size: 1.1rem;">
+                Serving and protecting Spring Hills community since 2021. Our department combines 
+                traditional policing methods with modern technology to ensure public safety.
+            </p>
+            
+            <div class="address">
+                1450 South Main St., Spring Hills
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div>Sworn Officers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div>Patrol Coverage</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div>Community Programs</div>
+                </div>
+            </div>
+
+            <h3 style="color: #1a3e72; border-bottom: 2px solid #1a3e72; padding-bottom: 5px;">OUR MISSION</h3>
+            <p>
+                To build trust through transparency, combat crime with precision, and foster 
+                partnerships that make Spring Hills one of the safest communities in the state.
+            </p>
+            
+            <h3 style="color: #1a3e72; border-bottom: 2px solid #1a3e72; padding-bottom: 5px;">NOTABLE ACHIEVEMENTS</h3>
+            <ul>
+                <li>2023 Governor's Award for Community Policing</li>
+                <li>15% reduction in violent crime since 2021</li>
+                <li>First in the state to implement body-worn cameras department-wide</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
